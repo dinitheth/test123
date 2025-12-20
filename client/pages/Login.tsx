@@ -1,19 +1,19 @@
-import { Link, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import { User } from 'lucide-react';
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import { User } from "lucide-react";
 
 export default function Login() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Simple validation - in a real app, you'd connect to a backend
     if (username && password) {
-      navigate('/');
+      navigate("/");
     }
   };
 
@@ -25,7 +25,11 @@ export default function Login() {
         {/* Left Diagonal Shape */}
         <div className="hidden md:block relative bg-white">
           <div className="absolute inset-0 overflow-hidden">
-            <svg className="absolute left-0 top-0 w-96 h-96" viewBox="0 0 500 500" fill="none">
+            <svg
+              className="absolute left-0 top-0 w-96 h-96"
+              viewBox="0 0 500 500"
+              fill="none"
+            >
               <polygon points="0,0 500,0 400,500 0,500" fill="#5FD3D3" />
             </svg>
           </div>
@@ -75,8 +79,11 @@ export default function Login() {
 
           <div className="mt-8 text-center">
             <p className="text-black">
-              Don't have an account?{' '}
-              <Link to="/signup" className="font-bold underline hover:opacity-80">
+              Don't have an account?{" "}
+              <Link
+                to="/signup"
+                className="font-bold underline hover:opacity-80"
+              >
                 Sign Up
               </Link>
             </p>

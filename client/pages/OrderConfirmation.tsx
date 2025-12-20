@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
-import { CheckCircle } from 'lucide-react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import { Link } from "react-router-dom";
+import { CheckCircle } from "lucide-react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function OrderConfirmation() {
   return (
@@ -19,8 +19,12 @@ export default function OrderConfirmation() {
 
           {/* Main Message */}
           <div className="space-y-4">
-            <h1 className="text-5xl font-bold text-black">Thanks for shopping with us!</h1>
-            <p className="text-2xl text-black">Your order has been confirmed. We'll take good care of it.</p>
+            <h1 className="text-5xl font-bold text-black">
+              Thanks for shopping with us!
+            </h1>
+            <p className="text-2xl text-black">
+              Your order has been confirmed. We'll take good care of it.
+            </p>
             <p className="text-2xl text-black">We'll keep you updated.</p>
           </div>
 
@@ -39,8 +43,8 @@ export default function OrderConfirmation() {
 
           {/* Continue Shopping */}
           <div className="mt-16">
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               className="bg-fs-cyan text-black font-bold py-4 px-8 text-lg rounded inline-block hover:opacity-90 transition-all"
             >
               Back to Home

@@ -1,27 +1,29 @@
-import { useState } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import { useState } from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert('Thank you for your message! We will get back to you soon.');
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    alert("Thank you for your message! We will get back to you soon.");
+    setFormData({ name: "", email: "", subject: "", message: "" });
   };
 
   return (
@@ -37,7 +39,9 @@ export default function Contact() {
             <h2 className="text-2xl font-bold text-black mb-8">Get in Touch</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label className="block text-lg font-bold text-black mb-2">Name</label>
+                <label className="block text-lg font-bold text-black mb-2">
+                  Name
+                </label>
                 <input
                   type="text"
                   name="name"
@@ -49,7 +53,9 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="block text-lg font-bold text-black mb-2">Email</label>
+                <label className="block text-lg font-bold text-black mb-2">
+                  Email
+                </label>
                 <input
                   type="email"
                   name="email"
@@ -61,7 +67,9 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="block text-lg font-bold text-black mb-2">Subject</label>
+                <label className="block text-lg font-bold text-black mb-2">
+                  Subject
+                </label>
                 <input
                   type="text"
                   name="subject"
@@ -73,7 +81,9 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="block text-lg font-bold text-black mb-2">Message</label>
+                <label className="block text-lg font-bold text-black mb-2">
+                  Message
+                </label>
                 <textarea
                   name="message"
                   value={formData.message}
@@ -95,13 +105,17 @@ export default function Contact() {
 
           {/* Contact Information */}
           <div>
-            <h2 className="text-2xl font-bold text-black mb-8">Contact Information</h2>
+            <h2 className="text-2xl font-bold text-black mb-8">
+              Contact Information
+            </h2>
             <div className="space-y-8">
               <div>
                 <h3 className="text-xl font-bold text-black mb-2">Address</h3>
                 <p className="text-lg text-gray-700">
-                  F&S Clothing Store<br />
-                  123 Fashion Street<br />
+                  F&S Clothing Store
+                  <br />
+                  123 Fashion Street
+                  <br />
                   Colombo, Sri Lanka
                 </p>
               </div>
@@ -109,7 +123,8 @@ export default function Contact() {
               <div>
                 <h3 className="text-xl font-bold text-black mb-2">Phone</h3>
                 <p className="text-lg text-gray-700">
-                  +94 (0) 11 234 5678<br />
+                  +94 (0) 11 234 5678
+                  <br />
                   +94 (0) 77 123 4567
                 </p>
               </div>
@@ -117,16 +132,21 @@ export default function Contact() {
               <div>
                 <h3 className="text-xl font-bold text-black mb-2">Email</h3>
                 <p className="text-lg text-gray-700">
-                  info@fsclothing.com<br />
+                  info@fsclothing.com
+                  <br />
                   support@fsclothing.com
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-bold text-black mb-2">Business Hours</h3>
+                <h3 className="text-xl font-bold text-black mb-2">
+                  Business Hours
+                </h3>
                 <p className="text-lg text-gray-700">
-                  Monday - Friday: 9:00 AM - 6:00 PM<br />
-                  Saturday: 10:00 AM - 5:00 PM<br />
+                  Monday - Friday: 9:00 AM - 6:00 PM
+                  <br />
+                  Saturday: 10:00 AM - 5:00 PM
+                  <br />
                   Sunday: Closed
                 </p>
               </div>
@@ -134,9 +154,24 @@ export default function Contact() {
               <div>
                 <h3 className="text-xl font-bold text-black mb-4">Follow Us</h3>
                 <div className="flex gap-4">
-                  <a href="#" className="bg-blue-600 text-white p-3 rounded hover:bg-blue-700">Facebook</a>
-                  <a href="#" className="bg-pink-600 text-white p-3 rounded hover:bg-pink-700">Instagram</a>
-                  <a href="#" className="bg-green-600 text-white p-3 rounded hover:bg-green-700">WhatsApp</a>
+                  <a
+                    href="#"
+                    className="bg-blue-600 text-white p-3 rounded hover:bg-blue-700"
+                  >
+                    Facebook
+                  </a>
+                  <a
+                    href="#"
+                    className="bg-pink-600 text-white p-3 rounded hover:bg-pink-700"
+                  >
+                    Instagram
+                  </a>
+                  <a
+                    href="#"
+                    className="bg-green-600 text-white p-3 rounded hover:bg-green-700"
+                  >
+                    WhatsApp
+                  </a>
                 </div>
               </div>
             </div>

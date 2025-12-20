@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-import { ShoppingCart, Search, Heart } from 'lucide-react';
+import { Link } from "react-router-dom";
+import { ShoppingCart, Search, Heart } from "lucide-react";
 
 export default function Header() {
   return (
@@ -17,9 +17,9 @@ export default function Header() {
         <div className="flex-1 mx-8">
           <div className="bg-white border border-gray-300 rounded px-4 py-2 flex items-center">
             <Search size={20} className="text-black" />
-            <input 
-              type="text" 
-              placeholder="Search..." 
+            <input
+              type="text"
+              placeholder="Search..."
               className="ml-2 w-full border-0 outline-none bg-white text-black"
             />
           </div>
@@ -27,10 +27,30 @@ export default function Header() {
 
         {/* Navigation */}
         <nav className="flex items-center gap-8">
-          <Link to="/" className="text-black font-bold text-lg hover:opacity-80">HOME</Link>
-          <Link to="/shop" className="text-black font-bold text-lg hover:opacity-80">SHOP</Link>
-          <Link to="/promotion" className="text-black font-bold text-lg hover:opacity-80">PROMOTION</Link>
-          <Link to="/contact" className="text-black font-bold text-lg hover:opacity-80">CONTACT</Link>
+          <Link
+            to="/"
+            className="text-black font-bold text-lg hover:opacity-80"
+          >
+            HOME
+          </Link>
+          <Link
+            to="/shop"
+            className="text-black font-bold text-lg hover:opacity-80"
+          >
+            SHOP
+          </Link>
+          <Link
+            to="/promotion"
+            className="text-black font-bold text-lg hover:opacity-80"
+          >
+            PROMOTION
+          </Link>
+          <Link
+            to="/contact"
+            className="text-black font-bold text-lg hover:opacity-80"
+          >
+            CONTACT
+          </Link>
         </nav>
 
         {/* Right Actions */}
@@ -41,8 +61,8 @@ export default function Header() {
           <Link to="/cart" className="bg-white p-2 rounded hover:bg-gray-100">
             <ShoppingCart size={24} className="text-black" />
           </Link>
-          <Link 
-            to="/login" 
+          <Link
+            to="/login"
             className="bg-fs-cyan text-black font-bold px-6 py-2 rounded border-2 border-black hover:bg-opacity-90"
           >
             LOGIN
