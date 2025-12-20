@@ -105,6 +105,23 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1 {
+    @apply text-4xl font-bold;
+  }
+
+  h2 {
+    @apply text-3xl font-bold;
+  }
+
+  h3 {
+    @apply text-2xl font-bold;
+  }
+
+  h4 {
+    @apply text-xl font-bold;
   }
 
   :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
@@ -116,5 +133,14 @@
   code {
     overflow-x: auto;
     white-space: pre;
+  }
+
+  input, textarea, select {
+    @apply bg-input text-foreground border border-border rounded;
+    padding: 0.75rem;
+  }
+
+  input::placeholder {
+    @apply text-muted-foreground;
   }
 }
