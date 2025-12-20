@@ -57,6 +57,17 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        cyan: {
+          DEFAULT: "#5FD3D3",
+          light: "#7FDEDE",
+          dark: "#4ECDC4",
+        },
+        "fs-cyan": "#5FD3D3",
+        "fs-black": "#000000",
+        "fs-white": "#FFFFFF",
+        "fs-gray": "#D3D3D3",
+        "fs-dark-gray": "#808080",
+        "fs-green": "#2ECC71",
       },
       borderRadius: {
         lg: "var(--radius)",
